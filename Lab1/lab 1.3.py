@@ -5,7 +5,7 @@
 
 myname = "Yernar" #It is my oficcial name :)
 my_name = "Yera" #My classmates call me :) 
-_my_name = "Erom" # close people
+_my_name = "Erom" #close people
 myname = "Nora" #My parents call me like this.
 MYNAME = "Ernar" 
 myname = "Yernar"
