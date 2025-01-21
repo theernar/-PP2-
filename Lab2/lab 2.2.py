@@ -1,4 +1,4 @@
-#Python: Operators
+#Python: Operatorss
 
 # Addition: +
 # Multiplication: *
