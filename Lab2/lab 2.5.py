@@ -1,4 +1,4 @@
-#Python: Conditions and If | else
+#Python: Conditions
 
 # 1) Equals: a == b
 # 2) Not equals: a != b
