@@ -1,4 +1,4 @@
-#Python: tuples; 
+#Python: tuples
 
 #Tuples are similar topic with lists. But tuples are unchangeable!
 
