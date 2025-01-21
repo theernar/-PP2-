@@ -58,4 +58,3 @@ if o > p and s > p:
     print("YES")
 else: 
     print("NO")
-    
