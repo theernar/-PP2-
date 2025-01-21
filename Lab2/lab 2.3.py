@@ -1,4 +1,4 @@
-#Python: Lists
+#Python: Listss
 
 list = ["PP1", "PP2", "Calculus 1", "Calculus 2"]
 print(list) #Result: ['PP1', 'PP2', 'Calculus 1', 'Calculus']
