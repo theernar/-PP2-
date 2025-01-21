@@ -12,6 +12,7 @@ print(9 == 9) #Result: True
 print(bool("Yernar")) #Result: True
 print(bool(1234)) #Result: True
 print(bool(0)) #Result: False
+print(bool(0)) #Result: False
 
 x = 2
 y = 2
