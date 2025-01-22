@@ -1,4 +1,4 @@
-#Python variables and comments!
+#Python variables and comments
 #In this file legal and illegal type of variables: 
 
 #Legal variables are:
