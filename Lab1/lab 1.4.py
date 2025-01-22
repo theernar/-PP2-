@@ -1,4 +1,4 @@
-#Python variables: In this file i will practise all type of variables;
+#Python variables: In this file i will practise all type of variables!
 
 x, y, z = "PP1", "PP2", "Discrete structures"
 print(x) #Result is: PP1.
