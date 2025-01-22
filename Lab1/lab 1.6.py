@@ -1,5 +1,4 @@
 #Python: string. In this file i will write some informations about this topic and practise; 
-
 #First information: "" = '' for example "Hello" is same as 'Hello'
 
 print("Hello World!")
