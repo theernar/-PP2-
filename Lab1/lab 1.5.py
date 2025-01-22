@@ -1,4 +1,4 @@
-#Python (Data types): In this file i will write the informations about this topic and practise;
+#Python (Data types): In this file i will write the informations about this topic and practise!
 
 #Text type = str; 
 #Numeric type: int, float, double, complex; 
