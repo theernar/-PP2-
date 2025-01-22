@@ -1,4 +1,4 @@
 # Hello, teacher! 
-# Python introduction
+# Python introduction:
 
 print("Hello World!")
