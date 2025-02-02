@@ -1,4 +1,4 @@
-#Python: classes and Objects
+#Python: classes and objects
 
 #What is the classes and objects? I asked from AI and answer in kazakh: 
 #Класс – белгілі бір типтегі объектілерді жасауға арналған шаблон немесе үлгі.
