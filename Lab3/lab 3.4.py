@@ -1,4 +1,4 @@
-#Python: inheritance
+#Python: Inheritance
 #Inheritance in kazakh is "мұрагерлік"
 
 # Ата-аналық класс: Person
