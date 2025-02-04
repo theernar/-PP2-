@@ -1,4 +1,4 @@
-#Fifth exercise: Write a function that takes a category and computes the average IMDB score.
+#Fifth exercise: write a function that takes a category and computes the average IMDB score.
 
 # Dictionary of movies
 
