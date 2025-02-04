@@ -1,4 +1,4 @@
-#Eigth exercise: Write a function that takes in a list of integers and returns True if it contains 007 in order
+#Eigth exercise: write a function that takes in a list of integers and returns True if it contains 007 in order
 def spy_game(nums): #We opened new function. Name of the function is - spy_game
     sequence = [0, 0, 7] #List
     seq_index = 0 #Index
