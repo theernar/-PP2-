@@ -1,4 +1,4 @@
-#Thirteen exercise: Write a program able to play the "Guess the number" - game, where the number to be guessed is randomly chosen between 1 and 20. 
+#Thirteen exercise: write a program able to play the "Guess the number" - game, where the number to be guessed is randomly chosen between 1 and 20. 
 #This is how it should work when run in a terminal:
 
 
