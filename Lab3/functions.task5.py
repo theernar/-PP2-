@@ -1,4 +1,4 @@
-#Fifth exercise: Write a function that accepts string from user and print all permutations of that string.
+#Fifth exercise: write a function that accepts string from user and print all permutations of that string.
 
 from itertools import permutations #It is library of python. If we want to find permutations of string, we often use this library
 def find_permutations(string):
