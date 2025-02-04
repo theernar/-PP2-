@@ -1,4 +1,4 @@
-#Tenth exercise: Write a Python function that takes a list and returns a new list with unique elements of the first list. Note: don't use collection set.
+#Tenth exercise: write a Python function that takes a list and returns a new list with unique elements of the first list. Note: don't use collection set.
 
 def unique_elements(list): #We opened a new function. Name of the function is - unique_elements.
     new_list = [] #List of unique elements.
