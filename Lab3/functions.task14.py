@@ -1,4 +1,4 @@
-# Last exercise: Create a python file and import some of the functions from the above 13 tasks and try to use them.
+# Last exercise: create a python file and import some of the functions from the above 13 tasks and try to use them.
 # From [name of the file] import [name of the function]
 
 from functions.task1 import my_task1
