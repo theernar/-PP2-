@@ -1,4 +1,4 @@
-#Third exercise: Write a function that takes a category name and returns just those movies under that category.
+#Third exercise: write a function that takes a category name and returns just those movies under that category.
 
 # Dictionary of movies
 
