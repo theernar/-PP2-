@@ -12,5 +12,7 @@ print(s)
 
 length = int(input())
 high = int(input())
-sin_angle = math.radians(sin_angle)
-area = length * high * sin_angle
+sin_angle = int(input())
+convert = math.radians(sin_angle)
+area = length * high * math.sin(convert)
+print(area)
