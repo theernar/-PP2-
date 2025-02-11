@@ -1,5 +1,5 @@
 #Python: math (Third exercise)
-#Write a Python program to calculate the area of regular polygon.
+#Write a Python program to calculate the area of regular polygon
 
 import math
 n = int(input("Enter the number: "))
