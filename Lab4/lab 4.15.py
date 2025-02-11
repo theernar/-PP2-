@@ -1,5 +1,5 @@
 #Python: date (Third exercise)
-#Write a Python program to drop microseconds from datetime.
+#Write a Python program to drop microseconds from datetime
 
 from datetime import datetime
 import datetime
