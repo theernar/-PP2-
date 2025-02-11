@@ -1,5 +1,5 @@
 #Python: date (Third exercise)
-#Write a Python program to calculate two date difference in seconds.
+#Write a Python program to calculate two date difference in seconds
 
 from datetime import datetime
 
