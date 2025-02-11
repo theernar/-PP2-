@@ -1,5 +1,5 @@
 #Python: math (Second exercise)
-#Write a Python program to calculate the area of a trapezoid.
+#Write a Python program to calculate the area of a trapezoid
 
 import math
 height = int(input("Enter the height: "))
