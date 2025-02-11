@@ -1,5 +1,5 @@
 #Python: date (First exercise)
-#Write a Python program to subtract five days from current date.
+#Write a Python program to subtract five days from current date
 
 from datetime import datetime, timedelta
 import datetime
