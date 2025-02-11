@@ -1,5 +1,5 @@
 #Python: iterator and generator (fifth exercise)
-#Implement a generator that returns all numbers from (n) down to 0.
+#Implement a generator that returns all numbers from (n) down to 0
 
 def number(n):
     while n >= 0: 

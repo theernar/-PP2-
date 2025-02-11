@@ -1,4 +1,4 @@
-#Python: iterator and generator (fourth exercise!)
+#Python: iterator and generator (fourth exercise)
 #Implement a generator called squares to yield the square of all numbers from (a) to (b). Test it with a "for" loop and print each of the yielded values
 
 def squares (a,b):
