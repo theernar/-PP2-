@@ -1,1 +1,0 @@
-Python: math (fourth exercise)
