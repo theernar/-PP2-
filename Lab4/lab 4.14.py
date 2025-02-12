@@ -1,5 +1,5 @@
-#Python: date (Second exercise)
-#Write a Python program to print yesterday, today, tomorrow
+#  Python: date (Second exercise)
+#  Write a Python program to print yesterday, today, tomorrow
 
 from datetime import datetime, timedelta
 import datetime

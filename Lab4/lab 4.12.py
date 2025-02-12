@@ -8,10 +8,14 @@ print(x)
 
 x = datetime.datetime.now()
 print(x.year)
-print(x.strftime("%A"))   #  Аптаның толық атауын шығару. Мысалы: Monday, Tuesday
-print(x.strftime("%B"))   #  Айдың толық атауы. 
-print(x.strftime("%Y"))   #  Жылды шығару үшін.
-print(x.strftime("%d"))   #  Күнді шығар.
+print(x.strftime("%A"))   
+#  Аптаның толық атауын шығару. Мысалы: Monday, Tuesday
+print(x.strftime("%B"))   
+#  Айдың толық атауы. 
+print(x.strftime("%Y"))   
+#  Жылды шығару үшін.
+print(x.strftime("%d"))   
+#  Күнді шығар.
 
 
 y = datetime.datetime(2020, 5, 17)
