@@ -5,7 +5,7 @@ with open(file_path, "r") as file:
     data = json.load(file)  
 
 print("Interface Status")
-print("=" * 50)
+print("=" * 90)
 print("DN".ljust(50) + "Description".ljust(20) + "Speed".ljust(10) + "MTU")
 print("-" * 90)
 
