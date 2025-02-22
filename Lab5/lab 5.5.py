@@ -1,4 +1,4 @@
-#LAB 5:
+#LAB 5
 #Fifth exercise: Write a Python program that matches a string that has an 'a' followed by anything, ending in 'b'.
 
 import re
