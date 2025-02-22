@@ -1,4 +1,4 @@
-#LAB 5
+#LAB 5:
 #Third exercise: Write a Python program to find sequences of lowercase letters joined with a underscore.
 
 import re
