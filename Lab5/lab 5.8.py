@@ -1,4 +1,4 @@
-#LAB 5: 
+#LAB 5
 #Eighth exercise: Write a Python program to split a string at uppercase letters.
 
 import re 
