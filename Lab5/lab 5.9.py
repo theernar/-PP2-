@@ -1,4 +1,4 @@
-#LAB 5:
+#LAB 5
 #Nineth exercise: Write a Python program to insert spaces between words starting with capital letters.
 
 import re
