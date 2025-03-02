@@ -1,5 +1,5 @@
 #Built - in functions: 
-#Fourth exercise: Write a Python program that invoke square root function after specific milliseconds.
+#Fourth exercise: Write a Python program that invoke square root function after specific milliseconds
 
 import time  
 import math 
