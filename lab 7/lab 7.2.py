@@ -1,51 +1,55 @@
-#Second exercise: Create music player with keyboard controller. You have to be able to press keyboard: play, stop, next and previous as some keys.
-#Player has to react to the given command appropriately:
-
 import pygame
-
 pygame.init()
-pygame.mixer.init()
+screen = pygame.display.set_mode((1163, 535))
 
-WIDTH, HEIGHT = 500, 300
-screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Music Player")
-
-WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
-
-music_files = [
-    "music1.mp3", 
-    "music2.mp3",  
-    "music3.mp3"   
+isDone = True
+index = 0
+sounds = [
+    r"C:\Users\user\Desktop\PP2\lab 7\Miyagi - Captain.mp3",
+    r"C:\Users\user\Desktop\PP2\lab 7\MiyaGi & Эндшпиль - Fire Man.mp3",
+    r"C:\Users\user\Desktop\PP2\lab 7\Виктор Цой - Группа крови.mp3"
 ]
-current_track = 0 
 
-def play_music():
-    pygame.mixer.music.load(music_files[current_track])
-    pygame.mixer.music.play()
+color = (255, 255, 255)
 
-running = True
-while running:
-    screen.fill(WHITE)  
-    
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-        elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_SPACE:  
-                if pygame.mixer.music.get_busy():
-                    pygame.mixer.music.pause()
-                else:
-                    pygame.mixer.music.unpause()
-            elif event.key == pygame.K_RIGHT: 
-                current_track = (current_track + 1) % len(music_files)
-                play_music()
-            elif event.key == pygame.K_LEFT: 
-                current_track = (current_track - 1) % len(music_files)
-                play_music()
-            elif event.key == pygame.K_s:  
-                pygame.mixer.music.stop()
-    
+isPaused = False
+isPlayed = True
+while isDone:
+    screen.fill(color)
     pygame.display.update()
-    
-pygame.quit()
+    for event in pygame.event.get():
+
+        if event.type == pygame.QUIT:
+            isDone = False
+
+        elif event.type == pygame.KEYDOWN and event.key == pygame.K_RIGHT:
+            if index == len(sounds) - 1:
+                index = 0
+            else:
+                index += 1
+            isPaused = False
+            isPlayed = True
+
+        elif event.type == pygame.KEYDOWN and event.key == pygame.K_LEFT:
+            if index == 0:
+                index = len(sounds) - 1
+            else:
+                index -= 1
+            isPaused = False
+            isPlayed = True
+
+        if event.type == pygame.KEYDOWN and isPlayed:
+            if isPaused:
+                pygame.mixer.music.unpause()
+                isPaused = not isPaused
+            else:
+                pygame.mixer.music.load(sounds[index])
+                pygame.mixer.music.play(2)
+            isPlayed = not isPlayed
+
+        elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE and not isPlayed:
+            pygame.mixer.music.pause()
+            isPlayed = not isPlayed
+            isPaused = not isPaused
+
+    pygame.display.flip()

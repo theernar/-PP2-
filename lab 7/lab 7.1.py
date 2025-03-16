@@ -7,14 +7,17 @@ import pygame
 import datetime 
 
 pygame.init()
-WIDTH, HEIGHT = 800, 600
+WIDTH, HEIGHT = 1100, 920
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Mickey's clock")
 
-clock_img = pygame.image.load("clock.png")
+clock_img = pygame.image.load(r"C:\Users\user\Desktop\PP2\lab 7\clock.png")
 clock_face = pygame.transform.scale(clock_img, (WIDTH, HEIGHT))
-hand_right = pygame.image.load("rightarm.png")
-hand_left = pygame.image.load("leftarm.png")
+hand_right = pygame.image.load(r"C:\Users\user\Desktop\PP2\lab 7\rightarm.png")
+hand_left = pygame.image.load(r"C:\Users\user\Desktop\PP2\lab 7\leftarm.png")
+leftArmSecondImage = pygame.transform.scale(hand_left, (20, hand_left.get_height() // 2.5-30))
+RightArmSecondImage = pygame.transform.scale(hand_right, (hand_left.get_width() // 3, hand_left.get_height() // 3))
+
 
 WHITE = (255, 255, 255)
 clock = pygame.time.Clock()
