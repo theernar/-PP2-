@@ -1,6 +1,6 @@
 #first exercises: Create a simple clock application (only with minutes and seconds) which is synchronized with system clock. 
 # Use Mickey's right hand as minutes arrow and left - as seconds. 
-# For moving Mickey's hands you can use: pygame.transform.rotate more explanation:
+# For moving Mickey's hands you can use: pygame.transform.rotate more explanation.
 
 
 import pygame
