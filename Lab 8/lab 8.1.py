@@ -1,7 +1,7 @@
 import pygame
 import random
 
-# Pygame-ді инициализациялау. 
+# Pygame-ді инициализациялау
 pygame.init()
 
 # Экран, дисплей жасау және дисплейдің атауын енгізу. 
