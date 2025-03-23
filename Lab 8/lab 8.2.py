@@ -1,4 +1,4 @@
-#Second task: Snake game
+#Second task: Snake game!
 
 import pygame
 import random
