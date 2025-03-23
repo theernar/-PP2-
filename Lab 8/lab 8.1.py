@@ -1,24 +1,21 @@
 import pygame
 import random
 
-#Pygame-ді инициализациялау. 
 pygame.init()
 
-#Дисплей, экранның ұзындығын және енін енгізу. 
-WIDTH, HEIGHT = 500, 700
-screen = pygame.display.set_mode((WIDTH, HEIGHT)) # Экранды құру. 
-pygame.display.set_caption("Car Game")
+# Экран параметрлерін енгізу. 
+WIDTH, HEIGHT = 500, 700 # Экраннің өлшемдері
+screen = pygame.display.set_mode((WIDTH, HEIGHT)) # Экраннің өлшемдерін көрсету
+pygame.display.set_caption("Car Game") # Экраннің атауы
 
-# Суреттерді жүктеу
-car_img = pygame.image.load(r"C:\Users\user\Desktop\PP2\Lab 8\car.png")
-coin_img = pygame.image.load(r"C:\Users\user\Desktop\PP2\Lab 8\coin.png")
-road_img = pygame.image.load(r"C:\Users\user\Desktop\PP2\Lab 8\road.jpg")
+car_img = pygame.image.load(r"C:\Users\user\Desktop\python\lab8\car.jpg") # Машина суретін жүктеу
+coin_img = pygame.image.load(r"C:\Users\user\Desktop\python\lab8\coin.png") # Монета суретін жүктеу
+road_img = pygame.image.load(r"C:\Users\user\Desktop\python\lab8\road.jpg") # Жол суретін жүктеу
 
-# Элементтердің өлшемдерін беру. 
-car_width, car_height = 70, 140
-coin_width, coin_height = 40, 40
+car_width, car_height = 70, 140 # Машина өлшемі
+coin_width, coin_height = 40, 40 # Монета өлшемі
 
-car_img = pygame.transform.scale(car_img, (car_width, car_height)) 
+car_img = pygame.transform.scale(car_img, (car_width, car_height))
 coin_img = pygame.transform.scale(coin_img, (coin_width, coin_height))
 road_img = pygame.transform.scale(road_img, (WIDTH, HEIGHT))
 
@@ -29,7 +26,7 @@ car_speed = 5
 
 coin_x = random.randint(50, WIDTH - 50)
 coin_y = -50
-coin_speed = 3
+coin_speed = 10
 
 score = 0
 font = pygame.font.Font(None, 36)
@@ -41,7 +38,6 @@ while running:
     screen.blit(car_img, (car_x, car_y))
     screen.blit(coin_img, (coin_x, coin_y))
     
-    # Оқиғалармен жұмыс жасау. 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
@@ -51,6 +47,10 @@ while running:
         car_x -= car_speed
     if keys[pygame.K_RIGHT] and car_x < WIDTH - car_width - 10:
         car_x += car_speed
+    # if keys[pygame.K_UP] and car_y > 0:  # Алға қозғалту мүмкіндігі
+    #     car_y -= car_speed
+    # if keys[pygame.K_DOWN] and car_y < HEIGHT - car_height:
+    #     car_y += car_speed
 
     # Монета қозғалысы
     coin_y += coin_speed
@@ -64,11 +64,11 @@ while running:
         coin_y = -50
         coin_x = random.randint(50, WIDTH - 50)
     
-    # Ұпайды көрсету
+    # Ұпай көрсету
     text = font.render(f"Score: {score}", True, (255, 255, 255))
     screen.blit(text, (10, 10))
     
     pygame.display.update()
     clock.tick(30)
 
-pygame.quit() 
+pygame.quit()
