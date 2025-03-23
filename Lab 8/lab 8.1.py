@@ -1,72 +1,75 @@
 import pygame
 import random
 
-# Pygame-ді инициализациялау
 pygame.init()
 
-# Экран, дисплей жасау және дисплейдің атауын енгізу. 
-WIDTH, HEIGHT = 600, 400
+# Экран параметрлері
+WIDTH, HEIGHT = 500, 700
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Car Game")
 
-# Түстер
-WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
+# Суреттерді жүктеу
+car_img = pygame.image.load("/mnt/data/car.png")
+coin_img = pygame.image.load("/mnt/data/coin.png")
+road_img = pygame.image.load("/mnt/data/road.jpg")
 
-# Машина және жол суреттері
-car_img = pygame.image.load(r"C:\Users\user\Desktop\PP2\Lab 8\car.png")  # Машинаның суреті
-road_img = pygame.image.load(r"C:\Users\user\Desktop\PP2\Lab 8\coin.png")  # Жолдың суреті
-coin_img = pygame.image.load(r"C:\Users\user\Desktop\PP2\Lab 8\road.jpg")  # Монетаның суреті
+# Өлшемдерін өзгерту
+car_width, car_height = 70, 140
+coin_width, coin_height = 40, 40
 
-# Машинаның бастапқы орны
-car_x, car_y = WIDTH // 2 - 25, HEIGHT - 100
+car_img = pygame.transform.scale(car_img, (car_width, car_height))
+coin_img = pygame.transform.scale(coin_img, (coin_width, coin_height))
+road_img = pygame.transform.scale(road_img, (WIDTH, HEIGHT))
+
+# Ойын объектілері
+car_x = WIDTH // 2 - car_width // 2
+car_y = HEIGHT - car_height - 20
 car_speed = 5
 
-# Монетаның параметрлерін енгізу. 
 coin_x = random.randint(50, WIDTH - 50)
 coin_y = -50
 coin_speed = 3
-coins_collected = 0
 
+score = 0
+font = pygame.font.Font(None, 36)
 clock = pygame.time.Clock()
-running = True
 
+running = True
 while running:
-    screen.fill(WHITE)  # Фонды ақ түске келтірдік.
-    screen.blit(road_img, (0, 0))  # Жолдың суретін экранға шығардық. 
+    screen.blit(road_img, (0, 0))
+    screen.blit(car_img, (car_x, car_y))
+    screen.blit(coin_img, (coin_x, coin_y))
     
+    # Оқиғалар
     for event in pygame.event.get():
-        if event.type == pygame.QUIT: # Егер қолданушы экрандағы Х батырмасын басса, ойын тоқтайды. 
+        if event.type == pygame.QUIT:
             running = False
-    
+
+    # Басқару
     keys = pygame.key.get_pressed()
-    if keys[pygame.K_LEFT] and car_x > 50:
+    if keys[pygame.K_LEFT] and car_x > 10:
         car_x -= car_speed
-    if keys[pygame.K_RIGHT] and car_x < WIDTH - 100:
+    if keys[pygame.K_RIGHT] and car_x < WIDTH - car_width - 10:
         car_x += car_speed
-    
+
+    # Монета қозғалысы
     coin_y += coin_speed
     if coin_y > HEIGHT:
-        coin_x = random.randint(50, WIDTH - 50)
         coin_y = -50
-    
-    car_rect = pygame.Rect(car_x, car_y, 50, 100)
-    coin_rect = pygame.Rect(coin_x, coin_y, 30, 30)
-    if car_rect.colliderect(coin_rect):
-        coins_collected += 1
         coin_x = random.randint(50, WIDTH - 50)
+    
+    # Коллизия тексеру
+    if (car_x < coin_x < car_x + car_width or car_x < coin_x + coin_width < car_x + car_width) and \
+       (car_y < coin_y < car_y + car_height or car_y < coin_y + coin_height < car_y + car_height):
+        score += 1
         coin_y = -50
+        coin_x = random.randint(50, WIDTH - 50)
     
-    # Графиканы салу
-    screen.blit(car_img, (car_x, car_y))  # Машинаны салу
-    screen.blit(coin_img, (coin_x, coin_y))  # Монетаны салу
+    # Ұпай көрсету
+    text = font.render(f"Score: {score}", True, (255, 255, 255))
+    screen.blit(text, (10, 10))
     
-    # Жинаған монеталарды көрсету
-    font = pygame.font.Font(None, 30)
-    text = font.render(f"Coins: {coins_collected}", True, BLACK)
-    screen.blit(text, (WIDTH - 100, 10))
-    
-    pygame.display.update() # Экранды жаңалау. 
+    pygame.display.update()
     clock.tick(30)
 
-pygame.quit() # Экранды жабу. 
+pygame.quit()
