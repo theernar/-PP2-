@@ -2,7 +2,7 @@ import pygame
 import random
 
 pygame.init()
-WIDTH, HEIGHT = 600, 400 # THE WIDTH AND HEIGHT OF THE DISPLAY.
+WIDTH, HEIGHT = 600, 400 # THE WIDTH AND HEIGHT OF THE DISPLAY
 CELL_SIZE = 20 # THE CIZE OF THE FOOD
 screen = pygame.display.set_mode((WIDTH, HEIGHT)) # Created the display
 pygame.display.set_caption("Snake Game") #The name of the display 
