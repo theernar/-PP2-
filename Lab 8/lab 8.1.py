@@ -8,9 +8,9 @@ WIDTH, HEIGHT = 500, 700 # Экраннің өлшемдері
 screen = pygame.display.set_mode((WIDTH, HEIGHT)) # Экраннің өлшемдерін көрсету
 pygame.display.set_caption("Car Game") # Экраннің атауы
 
-car_img = pygame.image.load(r"C:\Users\user\Desktop\python\lab8\car.jpg") # Машина суретін жүктеу
-coin_img = pygame.image.load(r"C:\Users\user\Desktop\python\lab8\coin.png") # Монета суретін жүктеу
-road_img = pygame.image.load(r"C:\Users\user\Desktop\python\lab8\road.jpg") # Жол суретін жүктеу
+car_img = pygame.image.load(r"C:\Users\user\Desktop\PP2\Lab 8\car.png") # Машина суретін жүктеу
+coin_img = pygame.image.load(r"C:\Users\user\Desktop\PP2\Lab 8\coin.png") # Монета суретін жүктеу
+road_img = pygame.image.load(r"C:\Users\user\Desktop\PP2\Lab 8\road.jpg") # Жол суретін жүктеу
 
 car_width, car_height = 70, 140 # Машина өлшемі
 coin_width, coin_height = 40, 40 # Монета өлшемі
