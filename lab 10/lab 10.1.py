@@ -1,7 +1,7 @@
 import psycopg2
 import csv
 
-#PostgreSQL-ге қосылу
+#PostgreSQL-ге қосылу!
 def connect():
     return psycopg2.connect(
         host="localhost", 
